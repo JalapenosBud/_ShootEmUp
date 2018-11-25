@@ -1,0 +1,41 @@
+a shoot em up with upgrades
+scrolling background texture [x]
+flying controller; left right
+object pool
+bullet destroy script or deactivate
+autofire when holding down space 
+incoming enemies from above
+meteors that you have avoid, these can be shot but they split into smaller ones
+homing missiles that gets the nearest target, limited capacity per level
+upgrade: faster shot speed
+upgrade: homing missile capacity
+upgrade: triple machine gun
+upgrade: temporary strafing speed boost
+
+enemies: small fast ship that shoots in intervals
+enemies: big slow enemy that fires missiles in a straight line
+enemies: meteors that u have to evade
+
+health: health bar
+health: armor bar
+
+pickups: health, armor, missiles, speed boost
+
+colors: health = green, armor = blue, missile = yellow, speed boost = magenta
+
+score: points for killing enemies, collateral damage
+leaderboard, highscore
+
+chain kills, timer and bar that increases the higher combo you get
+combo text should be center left
+X-n for each kill untill timer runs out
+intro and outro sequence
+death screen
+game over / retry
+menu
+sounds
+art
+slight acceleration and deacceleration when moving left or right
+just a tiny bit but not annoying
+explosions
+homing missiles can cause collateral damage and increase combo counter
