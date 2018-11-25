@@ -5,10 +5,11 @@ public class Bullet : MonoBehaviour {
 
     public LayerMask WhatIsEnemyType;
     public float timer = 0f;
+    //this is how long the timer should run before the bullet destroys itself
     public float travelDuration = 2f;
     public float radiusndistance = 0.3f;
     Timer cd = new Timer();
-
+    
     //int cntr = 0;
 
     void OnEnable()
@@ -22,14 +23,19 @@ public class Bullet : MonoBehaviour {
         CountDown();
     }
 
+    void DisableObject(GameObject go)
+    {
+        go.SetActive(false);
+    }
+
     void CountDown()
     {
         timer += Time.deltaTime;
         if (timer >= travelDuration)
         {
-            gameObject.SetActive(false);
+            DisableObject(gameObject);
         }
-        cd.Update();
+        //cd.Update();
     }
 
     void HitStuff()
@@ -40,12 +46,12 @@ public class Bullet : MonoBehaviour {
             if(hit.collider.gameObject.layer == 9) //player layer
             {
                 //hit.collider.gameObject.GetComponent<PlayerHealthController>().PlayerTakeDamage(1f, this.transform);
-                this.gameObject.SetActive(false);
+                DisableObject(gameObject);
             }
             else if(hit.collider.gameObject.layer == 10) //enemy layer
             {
                 hit.collider.gameObject.GetComponent<EnemyHealthController>().TakeDamage(1f);
-                this.gameObject.SetActive(false);
+                DisableObject(gameObject);
             }
 
             

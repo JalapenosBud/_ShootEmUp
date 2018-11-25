@@ -10,7 +10,7 @@ public class Timer {
     /// This property checks if the timer can start
     /// pre: timer must be at 0 seconds or below
     /// </summary>
-    public bool CanTimerStart
+    private bool CanTimerStart
     {
         get
         {
@@ -18,29 +18,11 @@ public class Timer {
         }
     }
 
-
-
-
-    //pre: timer (seconds) must be above 0
-    //post: 
-    /*public bool IsTimerRunning
-    {
-        get
-        {
-            return timer > 0;
-        }
-    }
-
     public void RunTimer()
     {
-        if(IsTimerRunning)
+        if(CanTimerStart)
         {
             timer -= Time.deltaTime;
         }
     }
-
-    public void StartTimer(float totalTimeToRun)
-    {
-        timer = time;
-    }*/
 }
